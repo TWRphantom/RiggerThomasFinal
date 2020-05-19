@@ -54,7 +54,7 @@ private void PrintBody (PrintWriter out)
 	   
       String input = request.getParameter("input");
       if(input == null){
-       error= "<li>input is required</li>";
+       out.print("<li>input is required</li>");
        input = "";
      }
 	   
@@ -75,5 +75,20 @@ public void doGet(HttpServletRequest request, HttpServletResponse response) thro
 		PrintWriter out = response.getWriter();
 		PrintBody(out);
 }
+	
+	
+printTruthTable(integer N, integer index, integer array truthVals) {
+   	if (index == N) {
+      	for (i=0; i<N; i++)
+         print(truthVals[i] + " ");
+     	 print(newline);
+   	} else {
+    	for (i=0; i<2; i++) {
+         truthVals[index] = i;
+         printTruthTable(N, index + 1, truthVals);
+  	}
+     }
+   }
+
 
 } // End 
