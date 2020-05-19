@@ -113,7 +113,7 @@ public class RiggerThomasFinal extends HttpServlet {
        PrintTail(out);
      }else{
        PrintHead(out);
-       PrintBody(out, name, year, jc, fw, rb, ss, vse, error);
+       PrintBody(out, name);
        PrintTail(out);
      }
 		
@@ -223,7 +223,7 @@ public class RiggerThomasFinal extends HttpServlet {
 	 * ***************************************************** Prints the <BODY> of
 	 * the HTML page with the form data values from the parameters.
 	 */
-	private void PrintBody (PrintWriter out, String name, String year, String jc, String fw, String rb, String ss, String vse, String error){
+	private void PrintBody (PrintWriter out, String name){//, String year, String jc, String fw, String rb, String ss, String vse, String error){
 
 	
 	    
