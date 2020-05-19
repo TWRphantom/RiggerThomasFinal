@@ -57,15 +57,36 @@ private void PrintBody (PrintWriter out)
        out.print("<li>input is required</li>");
        input = "";
      }
-	   
-      
+      int length = input.length();
+	
+      int i;
+      int clauseNum, openParen, closedParen;
+      clauseNum = 1;
+      openParen = 1;
+      closedParen = 1;
+      for(i = 0; i < length; i++){//Count how many clauses in parenthesis there are
+      	 if(input.charAt(i) == '('){
+	     openParen = 1;
+	 }
+	 else if(input.charAt(i) == ')'){
+	     closedParen = 1;
+	 }
+	 if((openParen > 1) && (closedParen > 1))
+	 {
+		clauseNum++;
+		openParen--;
+		closedParen--;
+	 }
+      }
+	int[] vals = new int[clauseNum];
+      printTruthTable(clauseNum, 0, vals);
       out.print("<li>Your input is: <font color=green><li>");
       out.print(input);
       out.print("</font>\n");
       out.print("</body>\n");
       out.print("</html>\n");
 
-      int length = input.length();
+      
       
       out.close ();
    }
@@ -77,7 +98,7 @@ public void doGet(HttpServletRequest request, HttpServletResponse response) thro
 }
 	
 	
-/*public void printTruthTable(integer N, integer index, integer array truthVals) {
+public void printTruthTable(integer N, integer index, integer array truthVals) {
    	if (index == N) {
       	for (i=0; i<N; i++)
          print(truthVals[i] + " ");
@@ -88,7 +109,8 @@ public void doGet(HttpServletRequest request, HttpServletResponse response) thro
          printTruthTable(N, index + 1, truthVals);
   	}
      }
-   }*/
+   }
+
 
 
 } // End 
