@@ -30,9 +30,10 @@ private void PrintBody (PrintWriter out)
    out.println("Thomas Rigger");
    out.println("</p>");
 	 //Read information from user. Then send it to doPost
-   out.println("<form method=\"doPost\"");
-	 out.println("<td><input type=\"text\" name=\"+input+\" value=\"+name+\" size=30 required></td>");
-   out.println("<action=\"https://" + Domain + Path + Servlet + "\">");
+   //out.println("<form method=\"doPost\"");
+	 out.println("<td><input type=\"text\" name=\"input\"  size=30 required></td>");
+  out.println("<input type=\"submit\" onclick=\"doPost()\" value=\"Submit\">");
+  // out.println("<action=\"https://" + Domain + Path + Servlet + "\">");
    out.println("");
    
    out.println("</form>");
