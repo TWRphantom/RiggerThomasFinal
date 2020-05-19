@@ -103,8 +103,8 @@ public void printTruthTable(int N, int index, int[] truthVals) {
       int i;
       if (index == N) {
       	 for (i=0; i<N; i++){
-             out.print(" " + truthVals[i] + " "); 
-     	     out.print("\n");
+             out.println(" " + truthVals[i] + " "); 
+     	     out.println("\n");
 	 }
       } 
       else {
