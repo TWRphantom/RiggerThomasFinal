@@ -34,7 +34,7 @@ private void PrintBody (PrintWriter out)
    out.println("Thomas Rigger");
    out.println("</p>");
    out.println("<form method=\"doPost\"");
-	 out.println("<td><input type=\"text\" name=\""+input+"\" value=\""+name+"\" size=30 required></td>");
+	 out.println("<td><input type=\"text\" name=\"+input+\" value=\"+name+\" size=30 required></td>");
    out.println(" action=\"https://" + Domain + Path + Servlet + "\">");
    out.println("");
    
@@ -55,7 +55,7 @@ private void PrintBody (PrintWriter out)
       out.print("<center><h2>BooleanOutput</h2></center>\n");
       out.print("<hr>\n");
 
-      String Nm = request.getParameter("input");
+      String input = request.getParameter("input");
       out.print("Your input is: <font color=green>");
       out.print(input);
       out.print("</font>\n");
