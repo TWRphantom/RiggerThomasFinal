@@ -30,9 +30,9 @@ private void PrintBody (PrintWriter out)
    out.println("Thomas Rigger");
    out.println("</p>");
 	 //Read information from user. Then send it to doPost
-   out.println("<form method=\"doGet\"");
+   out.println("<form method=\"doPost\"");
 	 out.println("<td><input type=\"text\" name=\"+input+\" value=\"+name+\" size=30 required></td>");
-   out.println(" action=\"https://" + Domain + Path + Servlet + "\">");
+   out.println("<action=\"https://" + Domain + Path + Servlet + "\">");
    out.println("");
    
    out.println("</form>");
@@ -51,10 +51,14 @@ private void PrintBody (PrintWriter out)
       out.print("<body>\n");
       out.print("<center><h2>BooleanOutput</h2></center>\n");
       out.print("<hr>\n");
-
-      
 	   
       String input = request.getParameter("input");
+      if(input == null){
+       error= "<li>input is required</li>";
+       name = "";
+     }
+	   
+      
       out.print("Your input is: <font color=green>");
       out.print(input);
       out.print("</font>\n");
