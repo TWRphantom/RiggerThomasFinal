@@ -98,7 +98,7 @@ public void doGet(HttpServletRequest request, HttpServletResponse response) thro
 }
 	
 	
-public void printTruthTable(int N, int index, int[] truthVals) {
+public void printTruthTable(int N, int index, int[] truthVals, HttpServletRequest request, HttpServletResponse response) {
       int i;
       if (index == N) {
       	 for (i=0; i<N; i++){
