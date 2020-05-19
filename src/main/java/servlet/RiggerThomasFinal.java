@@ -12,25 +12,11 @@ import java.io.PrintWriter;
 import java.io.IOException;
 import javax.servlet.annotation.WebServlet;
 
-@WebServlet(name = "assignment8", // "MyServlet2",
-		urlPatterns = { "/assignment8" })
+@WebServlet(name = "RiggerThomasFinal", 
+		urlPatterns = { "/RiggerThomasFinal" })
 
-// assignment6 class
-// CONSTRUCTOR: no constructor specified (default)
-//
-// ***************  PUBLIC OPERATIONS  **********************************
-// public void doPost ()  --> prints a blank HTML page
-// public void doGet ()  --> prints a blank HTML page
-// private void PrintHead (PrintWriter out) --> Prints the HTML head section
-// private void PrintBody (PrintWriter out) --> Prints the HTML body with
-//              the form. Fields are blank.
-// private void PrintBody (PrintWriter out, String lhs, String rhs, String rslt)
-//              Prints the HTML body with the form.
-//              Fields are filled from the parameters.
-// private void PrintTail (PrintWriter out) --> Prints the HTML bottom
-//***********************************************************************
 
-public class assignment8 extends HttpServlet {
+public class RiggerThomasFinal extends HttpServlet {
 
 	/**
 	 * 
