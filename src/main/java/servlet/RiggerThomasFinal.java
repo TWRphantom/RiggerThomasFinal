@@ -1,4 +1,35 @@
-public class RiggerThomasFinal extends HttpServlet {
+// package servlet;
+// Import Java Libraries
+import java.io.*;
+import java.util.*;
+
+//Import Servlet Libraries
+import javax.servlet.*;
+import javax.servlet.http.*;
+
+import java.io.PrintWriter;
+import java.io.IOException;
+import javax.servlet.annotation.WebServlet;
+
+@WebServlet(name = "RiggerThomasFinal", // "MyServlet2",
+		urlPatterns = { "/RiggerThomasFinal" })
+
+// assignment6 class
+// CONSTRUCTOR: no constructor specified (default)
+//
+// ***************  PUBLIC OPERATIONS  **********************************
+// public void doPost ()  --> prints a blank HTML page
+// public void doGet ()  --> prints a blank HTML page
+// private void PrintHead (PrintWriter out) --> Prints the HTML head section
+// private void PrintBody (PrintWriter out) --> Prints the HTML body with
+//              the form. Fields are blank.
+// private void PrintBody (PrintWriter out, String lhs, String rhs, String rslt)
+//              Prints the HTML body with the form.
+//              Fields are filled from the parameters.
+// private void PrintTail (PrintWriter out) --> Prints the HTML bottom
+//***********************************************************************
+
+public class assignment\ extends HttpServlet {
 
 	/**
 	 * 
@@ -199,11 +230,7 @@ public class RiggerThomasFinal extends HttpServlet {
      out.println("<body onLoad=\"setFocus()\">");
      out.println("<p>");
      // out.println("<b>Name:</b> Megan Ngo");
-   		 out.println("<b>SWE 432: </b> Thomas Rigger final");
-		out.println("<p>");
-		out.println("<b>Partners:</b>Thomas Rigger");
-		out.println("</p>");
-		out.println("<p><b>Collaboration Summary:</b> Megan and Thomas worked together to build and debug doGet, doPost, printBody, and printHead and then committed it to Heroku. </p>");
+   		 out.println("<b>SWE 432: </b> RiggerThomasFinal");
 		
      out.println("</p>");
 
@@ -222,9 +249,100 @@ public class RiggerThomasFinal extends HttpServlet {
      out.println("   <td><input type=\"text\" name=\""+Data.NAME.name()+"\" value=\""+name+"\" size=30 required></td>");
      out.println("  </tr>");
      out.println("  <tr>");
-		 
+		 out.println(" </table>");
+			out.println("<br> ");
+		   
+		out.println("What year are you?");         
+		out.println("  <select name=\""+Data.YEAR.name() +"\" value=\""+year+"\">");//size=30 required>");
+			    // name= \"School Year\">"); 
+		out.println("  <option value= \"Freshman\" selected=\"selected\">Freshman</option>"); 
+		out.println("  <option value=\"Sophomore\">Sophomore</option>"); 
+		out.println("  <option value=\"Junior\">Junior</option>"); 
+		out.println(" <option value=\"Senior\">Senior</option>"); 
+		out.println("</select>"); 
+
+		out.println("<br> <br> Please rate the following GMU buildings on a scale of 1 (worst) to 5 (best): <br> <br> ");
 		
-    out.println("<input type=\"submit\" onclick=\"doPost()\" value=\"Submit\">");
+		out.println("<b>Johnson Center</b>");
+		out.println("<br>");
+		// out.println("  <input type=\"radio\" name=\"JC\" id=\"one\" value=\"1\" />"); 
+		out.println("  <input type=\"radio\" name=\""+Data.JC.name() +"\" id=\"one\" value=\"1\">");
+		out.println("  <label for=\"one\">1</label>"); 
+		out.println("  <input type=\"radio\"name=\""+Data.JC.name() +"\" id=\"two\" value=\"2\" />");
+		out.println("  <label for=\"two\">2</label>");
+		out.println("  <input type=\"radio\" name=\""+Data.JC.name() +"\" id=\"three\" value=\"3\" checked=\"true\" />");
+		out.println("  <label for=\"three\">3</label>");
+		out.println("  <input type=\"radio\" name=\""+Data.JC.name() +"\" id=\"four\" value=\"4\" />");
+		out.println("  <label for=\"four\">4</label>");
+		out.println("  <input type=\"radio\" name=\""+Data.JC.name() +"\" id=\"five\" value=\"5\" />");
+		out.println("  <label for=\"five\">5</label>");
+
+		out.println("<br> ");
+		out.println("<b>Fenwick Library</b>");    
+		out.println("<br>");
+		out.println("  <input type=\"radio\" name=\""+Data.FW.name() +"\" id=\"one\" value=\"1\">");
+		// out.println("  <input type=\"radio\" name=\"Fenwick\" id=\"one\" value=\"1\" /> ");
+		out.println("  <label for=\"one\">1</label> ");
+		out.println("  <input type=\"radio\" name=\""+Data.FW.name() +"\" id=\"two\" value=\"2\" /> ");
+		out.println(" <label for=\"two\">2</label> ");
+		out.println("  <input type=\"radio\" name=\""+Data.FW.name() +"\" id=\"three\" value=\"3\" checked=\"true\" /> ");
+		out.println(" <label for=\"three\">3</label> ");
+		out.println("  <input type=\"radio\" name=\""+Data.FW.name() +"\" id=\"four\" value=\"4\" />");
+		out.println(" <label for=\"four\">4</label>");
+		out.println("  <input type=\"radio\" name=\""+Data.FW.name() +"\" id=\"five\" value=\"5\" />");
+		out.println(" <label for=\"five\">5</label>");
+
+		out.println("<br>");
+
+		out.println("<b>Robinson Hall B</b>");
+		out.println("<br>");
+		// out.println("  <input type=\"radio\" name=\"RB\" id=\"one\" value=\"1\" /> ");
+		out.println("  <input type=\"radio\" name=\""+Data.RB.name() +"\" id=\"one\" value=\"1\">");
+		out.println("  <label for=\"one\">1</label>"); 
+		out.println("  <input type=\"radio\" name=\""+Data.RB.name() +"\" id=\"two\" value=\"2\" />");
+		out.println("  <label for=\"two\">2</label>");
+		out.println("  <input type=\"radio\" name=\""+Data.RB.name() +"\" id=\"three\" value=\"3\" checked=\"true\" />");
+		out.println("  <label for=\"three\">3</label>");
+		out.println("  <input type=\"radio\" name=\""+Data.RB.name() +"\" id=\"four\" value=\"4\" />");
+		out.println("  <label for=\"four\">4</label>");
+		out.println("  <input type=\"radio\" name=\""+Data.RB.name() +"\" id=\"five\" value=\"5\" />");
+		out.println("  <label for=\"five\">5</label>");
+
+		out.println("<br>");
+
+		out.println("<b>Southside</b>");
+		out.println("<br>");
+		out.println("  <input type=\"radio\" name=\""+Data.SS.name() +"\" id=\"one\" value=\"1\">");
+		// out.println("  <input type=\"radio\" name=\"Southside\" id=\"one\" value=\"1\" />"); 
+		out.println("  <label for=\"one\">1</label>"); 
+		out.println("  <input type=\"radio\" name=\""+Data.SS.name() +"\" id=\"two\" value=\"2\" />");
+		out.println(" <label for=\"two\">2</label>");
+		out.println("  <input type=\"radio\" name=\""+Data.SS.name() +"\" id=\"three\" value=\"3\" checked=\"true\" /");
+		out.println(" <label for=\"three\">3</label>");
+		out.println("  <input type=\"radio\" name=\""+Data.SS.name() +"\" id=\"four\" value=\"4\" />");
+		out.println(" <label for=\"four\">4</label>");
+		out.println("  <input type=\"radio\" name=\""+Data.SS.name() +"\" id=\"five\" value=\"5\" />");
+		out.println(" <label for=\"five\">5</label>");
+
+		out.println("<br>");
+
+		out.println("<b>Volgenau School of Engineering</b>");
+		out.println("<br>");
+		out.println("  <input type=\"radio\" name=\""+Data.VSE.name() +"\" id=\"one\" value=\"1\">");
+		// out.println("  <input type=\"radio\" name=\"VSE\" id=\"one\" value=\"1\" /> ");
+		out.println("  <label for=\"one\">1</label> ");
+		out.println("  <input type=\"radio\" name=\""+Data.VSE.name() +"\" id=\"two\" value=\"2\" />");
+		out.println("  <label for=\"two\">2</label>");
+		out.println("  <input type=\"radio\" name=\""+Data.VSE.name() +"\" id=\"three\" value=\"3\" checked=\"true\" />");
+		out.println("  <label for=\"three\">3</label>");
+		out.println("  <input type=\"radio\" name=\""+Data.VSE.name() +"\" id=\"four\" value=\"4\" />");
+		out.println("  <label for=\"four\">4</label>");
+		out.println("  <input type=\"radio\" name=\""+Data.VSE.name() +"\" id=\"five\" value=\"5\" />");
+		out.println("  <label for=\"five\">5</label>");
+		out.println("<br>");
+		out.println("<p></p>");
+		
+		out.println("<input type=\"submit\" onclick=\"doPost()\" value=\"Submit\">");
 
 	/*	out.println("</form>");
 		     out.println(" <input type=\"submit\" value=\"" + OperationAdd
@@ -249,7 +367,6 @@ public class RiggerThomasFinal extends HttpServlet {
 	/*	out.println("<html>");
 		out.println("");
 		out.println("<head>");
-		out.println("<title>RiggerThomasFinal </title>");
 		out.println(" <link rel=\"stylesheet\" type=\"text/css\" href=\"" + Style + "\">");
 		out.println("</head>");
 		out.println("");
@@ -291,4 +408,4 @@ public class RiggerThomasFinal extends HttpServlet {
 		out.println("</html>");
 	} // End PrintTail
 
-}
+} // End assignment6
