@@ -18,7 +18,7 @@ import javax.servlet.annotation.WebServlet;
 public class RiggerThomasFinal extends HttpServlet {
 	
 
-static String Domain ="swe432RiggerThomasFinal.herokuapp.com";
+static String Domain ="thomasrigger432final.herokuapp.com";
 static String Path    = "/";
 static String Servlet = "RiggerThomasFinal";
 
