@@ -101,7 +101,7 @@ public void doGet(HttpServletRequest request, HttpServletResponse response) thro
 	
 public String printTruthTable(int N, int index, int[] truthVals) {
       int i;
-      String ret;
+      String ret = "";
       if (index == N) {
       	 for (i=0; i<N; i++){
             ret += " " + truthVals[i] + "\n";// + //out.println("<p> " + truthVals[i] + " </p>"); 
