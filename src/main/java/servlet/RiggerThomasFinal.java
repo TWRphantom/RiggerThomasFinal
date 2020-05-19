@@ -99,11 +99,12 @@ public void doGet(HttpServletRequest request, HttpServletResponse response) thro
 	
 	
 public void printTruthTable(integer N, integer index, integer array truthVals) {
-   	if (index == N) {
-      	for (i=0; i<N; i++)
-         print(truthVals[i] + " ");
-     	 print(newline);
-   	} else {
+      if (index == N) {
+      	 for (i=0; i<N; i++){
+             print(truthVals[i] + " ");
+     	     print(newline);
+	 }
+      } else {
     	for (i=0; i<2; i++) {
          truthVals[index] = i;
          printTruthTable(N, index + 1, truthVals);
