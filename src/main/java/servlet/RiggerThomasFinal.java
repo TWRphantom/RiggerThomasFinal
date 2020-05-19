@@ -46,43 +46,12 @@ public class RiggerThomasFinal extends HttpServlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		String name = request.getParameter(Data.NAME.name());
-     		String year = request.getParameter(Data.YEAR.name());
-		String jc = request.getParameter(Data.JC.name());
-		String fw = request.getParameter(Data.FW.name());
-		String rb = request.getParameter(Data.RB.name());
-		String ss = request.getParameter(Data.SS.name());
-		String vse = request.getParameter(Data.VSE.name());
+     		
      
      String error = "";
      if(name == null){
        error= "<li>Name is required</li>";
        name = "";
-     }
-
-     if(year == null){
-       error+= "<li>Year is required.<li>";
-       year = "";
-       
-     }
-     if(jc == null){
-    	 error+= "<li>JC is required.<li>";
-    	 jc = "";
-     }
-     if(fw == null){
-    	 error+= "<li>FW is required.<li>";
-    	 fw = "";
-     }
-	if(rb == null){
-    	 error+= "<li>RB is required.<li>";
-    	 rb = "";
-     }
-	if(ss == null){
-    	 error+= "<li>SS is required.<li>";
-    	 ss = "";
-     }
-	if(vse == null){
-    	 error+= "<li>VSE is required.<li>";
-    	 vse = "";
      }
 		
 
