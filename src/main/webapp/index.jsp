@@ -12,7 +12,7 @@
   
 <%@ page import="java.util.Date" %>
 <body>
-<h2>Hello Mr. Offutt! I am JSP</h2>
+<h2>Hello Mr. Offutt! I paniced and forgot how to program, and now nothing works.</h2>
 <strong>Current Time is</strong>: <%=new Date() %>
 <button onclick="window.location.assign(servletURL);"> Behold my final project! </button>
 
