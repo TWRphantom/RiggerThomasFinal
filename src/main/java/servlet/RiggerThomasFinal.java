@@ -34,7 +34,7 @@ public class RiggerThomasFinal extends HttpServlet {
 	static String Style = "https://www.cs.gmu.edu/~offutt/classes/432/432-style.css";
 	
 	
-	  static enum Data {NAME, YEAR, JC, FW, RB, SS, VSE};
+	  static enum Data {NAME};
   static String RESOURCE_FILE = "entries.txt";
   static final String VALUE_SEPARATOR = ";";
 
@@ -50,7 +50,7 @@ public class RiggerThomasFinal extends HttpServlet {
      
      String error = "";
      if(name == null){
-       error= "<li>Name is required</li>";
+       error= "<li>Bool is required</li>";
        name = "";
      }
 		
@@ -88,15 +88,8 @@ public class RiggerThomasFinal extends HttpServlet {
     out.println(" <table>");
 	
     try {
-	 out.println("  <table>");
         out.println("  <tr>");
         out.println("   <th>Name</th>");
-	out.println("   <th>Year</th>");
-        out.println("   <th>JC</th>");
-	out.println("   <th>FW</th>");
-	out.println("   <th>RB</th>");
-	out.println("   <th>SS</th>");
-	out.println("   <th>VSE</th>");
         out.println("  </tr>");
         File file = new File(resourcePath);
         if(!file.exists()){
@@ -350,7 +343,7 @@ public class RiggerThomasFinal extends HttpServlet {
 	 * (out,lhs,rhs,rslt) to print a page with blanks in the form fields.
 	 */
 	private void PrintBody(PrintWriter out) {
-		PrintBody(out, "", null, null, null, null, null, null, null);
+		PrintBody(out, "");
 	}
 
 
