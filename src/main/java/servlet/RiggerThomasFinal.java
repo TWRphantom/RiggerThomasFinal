@@ -99,12 +99,10 @@ public void doGet(HttpServletRequest request, HttpServletResponse response) thro
 	
 	
 public void printTruthTable(int N, int index, int[] truthVals) {
-      out.println("<p>");
       int i;
       if (index == N) {
       	 for (i=0; i<N; i++){
-             out.println(" " + truthVals[i] + " "); 
-     	     out.println("\n");
+             out.println("<p>  truthVals[i]  </p>"); 
 	 }
       } 
       else {
@@ -113,7 +111,6 @@ public void printTruthTable(int N, int index, int[] truthVals) {
          printTruthTable(N, index + 1, truthVals);
   	}
      }
-	out.println("</p>");
    }
 
 
