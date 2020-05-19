@@ -31,10 +31,9 @@ private void PrintBody (PrintWriter out)
    out.println("</p>");
 	 //Read information from user. Then send it to doPost
    //out.println("<form method=\"doPost\"");
-	 out.println("<td><input type=\"text\" name=\"input\"  size=30 required></td>");
-  out.println("<input type=\"submit\" onclick=\"doPost()\" value=\"Submit\">");
+   out.println("<td><input type=\"text\" name=\"input\"  size=30 required></td>");
+   out.println("<input type=\"submit\" onclick=\"doPost()\" value=\"Submit\">");
   // out.println("<action=\"https://" + Domain + Path + Servlet + "\">");
-   out.println("");
    
    out.println("</form>");
    out.println("</body>");
@@ -60,7 +59,7 @@ private void PrintBody (PrintWriter out)
      }
 	   
       
-      out.print("Your input is: <font color=green>");
+      out.print("<li>Your input is: <font color=green><li>");
       out.print(input);
       out.print("</font>\n");
       out.print("</body>\n");
@@ -77,8 +76,8 @@ public void doGet(HttpServletRequest request, HttpServletResponse response) thro
 		PrintBody(out);
 }
 	
-	/*
-printTruthTable(integer N, integer index, integer array truthVals) {
+	
+public void printTruthTable(integer N, integer index, integer array truthVals) {
    	if (index == N) {
       	for (i=0; i<N; i++)
          print(truthVals[i] + " ");
@@ -89,7 +88,7 @@ printTruthTable(integer N, integer index, integer array truthVals) {
          printTruthTable(N, index + 1, truthVals);
   	}
      }
-   }*/
+   }
 
 
 } // End 
