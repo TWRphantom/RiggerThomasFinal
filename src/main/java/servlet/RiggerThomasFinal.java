@@ -20,7 +20,7 @@ public class RiggerThomasFinal extends HttpServlet {
 
 static String Domain ="thomasrigger432final.herokuapp.com";
 static String Path    = "/";
-static String Servlet = "RiggerThomasFinal";
+static String Servlet = "";//"RiggerThomasFinal";
 
 	
 private void PrintBody (PrintWriter out)
