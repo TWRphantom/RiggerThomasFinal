@@ -104,7 +104,7 @@ public String printTruthTable(int N, int index, int[] truthVals) {
       String ret;
       if (index == N) {
       	 for (i=0; i<N; i++){
-            ret += " " + truthVals[i] + "\n");// + //out.println("<p> " + truthVals[i] + " </p>"); 
+            ret += " " + truthVals[i] + "\n";// + //out.println("<p> " + truthVals[i] + " </p>"); 
 	 }
       } 
       else {
