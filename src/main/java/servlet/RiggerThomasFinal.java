@@ -22,10 +22,6 @@ static String Domain ="swe432RiggerThomasFinal.herokuapp.com";
 static String Path    = "/";
 static String Servlet = "RiggerThomasFinal";
 
-private void PrintBody (PrintWriter out)
-{
-   PrintBody(out);
-}
 	
 private void PrintBody (PrintWriter out)
 {
