@@ -16,10 +16,31 @@ import javax.servlet.annotation.WebServlet;
 
 
 public class RiggerThomasFinal extends HttpServlet {
+	
 
-private void PrintBody (PrintWriter out){
-   out.println("   <td><input type=\"text\" name=\""+Data.NAME.name()+"\" value=\""+name+"\" size=30 required></td>");
+static String Domain ="swe432RiggerThomasFinal.herokuapp.com";
+static String Path    = "/";
+static String Servlet = "RiggerThomasFinal";
+
+private void PrintBody (PrintWriter out)
+{
+   PrintBody(out);
 }
+	
+private void PrintBody (PrintWriter out)
+{
+   out.println("<body>");
+   out.println("<p>");
+   out.println("Thomas Rigger");
+   out.println("</p>");
+   out.print  ("<form method=\"post\"");
+   out.println(" action=\"https://" + Domain + Path + Servlet + "\">");
+   out.println("");
+   out.println(" <input type=\"reset\" value=\"Reset\" name=\"reset\">");
+   out.println("</form>");
+   out.println("</body>");
+} // End PrintBody
+	
    public void doPost(HttpServletRequest request, HttpServletResponse response)
       throws ServletException, IOException
    {
@@ -43,4 +64,4 @@ private void PrintBody (PrintWriter out){
       out.close ();
    }
 
-} // End assignment6
+} // End 
