@@ -1,4 +1,4 @@
-public class assignment8 extends HttpServlet {
+public class RiggerThomasFinal extends HttpServlet {
 
 	/**
 	 * 
@@ -6,7 +6,7 @@ public class assignment8 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	static String Domain = "";
 	static String Path = "/";
-	static String Servlet = "assignment8";
+	static String Servlet = "RiggerThomasFinal";
 	
 // Button labels
 	static String OperationAdd = "Add";
@@ -180,7 +180,7 @@ public class assignment8 extends HttpServlet {
 	
 		
 		   
-            String lifeCycleURL = "/assignment8"; // --------------------------------------------
+            String lifeCycleURL = "/RiggerThomasFinal"; // --------------------------------------------
       out.print  ("<br><a href=\"" + lifeCycleURL + "?action=invalidate\">");
       out.println("Invalidate the session</a>");
        out.println("<br>");
@@ -249,7 +249,7 @@ public class assignment8 extends HttpServlet {
 	/*	out.println("<html>");
 		out.println("");
 		out.println("<head>");
-		out.println("<title>Assignment 8</title>");
+		out.println("<title>RiggerThomasFinal </title>");
 		out.println(" <link rel=\"stylesheet\" type=\"text/css\" href=\"" + Style + "\">");
 		out.println("</head>");
 		out.println("");
@@ -262,7 +262,7 @@ public class assignment8 extends HttpServlet {
 		
      out.println("");
      out.println("<head>");
-     out.println("<title>Assignment 8</title>");
+     out.println("<title>RiggerThomasFinal</title>");
      // Put the focus in the name field
      out.println ("<script>");
      out.println ("  function setFocus(){");
