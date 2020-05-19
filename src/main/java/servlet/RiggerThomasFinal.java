@@ -76,7 +76,7 @@ public void doGet(HttpServletRequest request, HttpServletResponse response) thro
 		PrintBody(out);
 }
 	
-	
+	/*
 printTruthTable(integer N, integer index, integer array truthVals) {
    	if (index == N) {
       	for (i=0; i<N; i++)
@@ -88,7 +88,7 @@ printTruthTable(integer N, integer index, integer array truthVals) {
          printTruthTable(N, index + 1, truthVals);
   	}
      }
-   }
+   }*/
 
 
 } // End 
