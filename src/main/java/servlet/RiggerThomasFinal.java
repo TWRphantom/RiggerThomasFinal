@@ -17,8 +17,9 @@ import javax.servlet.annotation.WebServlet;
 
 public class RiggerThomasFinal extends HttpServlet {
 
+private void PrintBody (PrintWriter out){
    out.println("   <td><input type=\"text\" name=\""+Data.NAME.name()+"\" value=\""+name+"\" size=30 required></td>");
-	
+}
    public void doPost(HttpServletRequest request, HttpServletResponse response)
       throws ServletException, IOException
    {
