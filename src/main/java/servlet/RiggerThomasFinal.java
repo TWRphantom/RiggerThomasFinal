@@ -80,7 +80,7 @@ private void PrintBody (PrintWriter out)
       }
 	int[] vals = new int[clauseNum];
       printTruthTable(clauseNum, 0, vals);
-      out.print("<li>Your input is: <font color=green><li>");
+      out.print("<li>Your input is: " + input + "<font color=green><li>");
       out.print(input);
       out.print("</font>\n");
       out.print("</body>\n");
@@ -99,11 +99,12 @@ public void doGet(HttpServletRequest request, HttpServletResponse response) thro
 	
 	
 public void printTruthTable(int N, int index, int[] truthVals) {
+      out.println("<p>");
       int i;
       if (index == N) {
       	 for (i=0; i<N; i++){
-             print(truthVals[i] + " ");
-     	     print(newline);
+             out.print(" " + truthVals[i] + " "); 
+     	     out.print("\n");
 	 }
       } 
       else {
@@ -112,6 +113,7 @@ public void printTruthTable(int N, int index, int[] truthVals) {
          printTruthTable(N, index + 1, truthVals);
   	}
      }
+	out.println("</p>");
    }
 
 
