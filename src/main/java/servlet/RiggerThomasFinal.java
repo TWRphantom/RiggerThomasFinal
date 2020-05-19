@@ -33,10 +33,11 @@ private void PrintBody (PrintWriter out)
    out.println("<p>");
    out.println("Thomas Rigger");
    out.println("</p>");
-   out.print  ("<form method=\"post\"");
+   out.println("<form method=\"doPost\"");
+	 out.println("<td><input type=\"text\" name=\""+input+"\" value=\""+name+"\" size=30 required></td>");
    out.println(" action=\"https://" + Domain + Path + Servlet + "\">");
    out.println("");
-   out.println(" <input type=\"reset\" value=\"Reset\" name=\"reset\">");
+   
    out.println("</form>");
    out.println("</body>");
 } // End PrintBody
@@ -48,15 +49,15 @@ private void PrintBody (PrintWriter out)
       PrintWriter out = response.getWriter();
 
       out.print("<html>\n<head>\n\n");
-      out.print("<title>SWE 432: Name echoing</title>\n");
+      out.print("<title>BooleanOutput</title>\n");
       out.print("</head>\n");
       out.print("<body>\n");
-      out.print("<center><h2>Name echoing</h2></center>\n");
+      out.print("<center><h2>BooleanOutput</h2></center>\n");
       out.print("<hr>\n");
 
-      String Nm = request.getParameter("username");
-      out.print("Your name is: <font color=green>");
-      out.print(Nm);
+      String Nm = request.getParameter("input");
+      out.print("Your input is: <font color=green>");
+      out.print(input);
       out.print("</font>\n");
       out.print("</body>\n");
       out.print("</html>\n");
