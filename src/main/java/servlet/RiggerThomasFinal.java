@@ -14,20 +14,6 @@ import javax.servlet.annotation.WebServlet;
 @WebServlet(name = "RiggerThomasFinal", // "MyServlet2",
 		urlPatterns = { "/RiggerThomasFinal" })
 
-// assignment6 class
-// CONSTRUCTOR: no constructor specified (default)
-//
-// ***************  PUBLIC OPERATIONS  **********************************
-// public void doPost ()  --> prints a blank HTML page
-// public void doGet ()  --> prints a blank HTML page
-// private void PrintHead (PrintWriter out) --> Prints the HTML head section
-// private void PrintBody (PrintWriter out) --> Prints the HTML body with
-//              the form. Fields are blank.
-// private void PrintBody (PrintWriter out, String lhs, String rhs, String rslt)
-//              Prints the HTML body with the form.
-//              Fields are filled from the parameters.
-// private void PrintTail (PrintWriter out) --> Prints the HTML bottom
-//***********************************************************************
 
 public class RiggerThomasFinal extends HttpServlet {
 
@@ -248,12 +234,12 @@ public class RiggerThomasFinal extends HttpServlet {
      out.println("   <td>Name:</td>");
      out.println("   <td><input type=\"text\" name=\""+Data.NAME.name()+"\" value=\""+name+"\" size=30 required></td>");
      out.println("  </tr>");
-     out.println("  <tr>");
+     /*out.println("  <tr>");
 		 out.println(" </table>");
-			out.println("<br> ");
+		//	out.println("<br> ");
 		   
 		out.println("What year are you?");         
-		out.println("  <select name=\""+Data.YEAR.name() +"\" value=\""+year+"\">");//size=30 required>");
+		//out.println("  <select name=\""+Data.YEAR.name() +"\" value=\""+year+"\">");//size=30 required>");
 			    // name= \"School Year\">"); 
 		out.println("  <option value= \"Freshman\" selected=\"selected\">Freshman</option>"); 
 		out.println("  <option value=\"Sophomore\">Sophomore</option>"); 
@@ -340,7 +326,7 @@ public class RiggerThomasFinal extends HttpServlet {
 		out.println("  <input type=\"radio\" name=\""+Data.VSE.name() +"\" id=\"five\" value=\"5\" />");
 		out.println("  <label for=\"five\">5</label>");
 		out.println("<br>");
-		out.println("<p></p>");
+		out.println("<p></p>");*/
 		
 		out.println("<input type=\"submit\" onclick=\"doPost()\" value=\"Submit\">");
 
