@@ -29,7 +29,7 @@ import javax.servlet.annotation.WebServlet;
 // private void PrintTail (PrintWriter out) --> Prints the HTML bottom
 //***********************************************************************
 
-public class assignment\ extends HttpServlet {
+public class RiggerThomasFinal extends HttpServlet {
 
 	/**
 	 * 
