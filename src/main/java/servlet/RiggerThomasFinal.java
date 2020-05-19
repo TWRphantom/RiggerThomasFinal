@@ -55,7 +55,7 @@ private void PrintBody (PrintWriter out)
       String input = request.getParameter("input");
       if(input == null){
        error= "<li>input is required</li>";
-       name = "";
+       input = "";
      }
 	   
       
